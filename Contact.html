@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Bliss</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url("https://t3.ftcdn.net/jpg/05/97/49/08/360_F_597490871_JhERmRVPR2o9dDBRKxYpvXbQzr5POTw1.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: left;
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            text-align: right;
+            margin: 20px;
+        }
+        nav a {
+            margin: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            color: navy;
+            padding: 10px;
+        }
+        nav a:hover {
+            background-color: lightgray;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            margin: 20px auto;
+            width: 60%;
+        }
+        .search-bar input, button {
+            margin: 5px;
+            padding: 8px;
+        }
+        .contact form, .registration form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact input, .contact textarea, .registration input {
+            width: 80%;
+            padding: 8px;
+            margin: 5px 0;
+        }
+        .contact button, .registration button {
+            background: navy;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .contact button:hover, .registration button:hover {
+            background: darkblue;
+        }
+        footer {
+            background-color: teal;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="HOME.HTML">Home</a>
+        <a href="DESTINATION.HTML">Destinations</a>
+        <a href="ABOUT.HTML">About</a>
+        <a href="CONTACT.HTML">Contact</a>
+    </nav>
+
+    <!-- Logo -->
+    <center>
+        <img height="150" src="https://png.pngtree.com/png-vector/20241120/ourmid/pngtree-green-s-vector-design-images-white-background-png-image_14507019.png" width="150"><H1><I>TRAVEL BLISS</I></H1>
+    </center>
+
+    <!-- Hero Section -->
+    <div class="container">
+        <h2>The World's Most</h2>
+        <h1>EXTRAORDINARY PLACES</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Destination">
+            <input type="text" placeholder="Travel Type">
+            <input type="date">
+            <input type="text" placeholder="Travelers">
+            <a href="MICRO%20PROECT.html">
+                <button>Find</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container contact">
+        <h2>Contact Us For Any Query</h2>
+        <form>
+            <label>Full Name:</label>
+            <input type="text" required>
+
+            <label>Email:</label>
+            <input type="email" required>
+
+            <label>Contact No.:</label>
+            <input type="tel" required>
+
+            <label>Add Query:</label>
+            <textarea rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Registration Form -->
+    <div class="container registration">
+        <h2>Registration</h2>
+        <form action="/action_page.php">
+            <label>First Name:</label>
+            <input type="text" value="abc">
+
+            <label>Last Name:</label>
+            <input type="text" value="xyz">
+
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="other"> Other
+
+            <label>Phone:</label>
+            <input type="tel" value="lmn">
+
+            <label>Email:</label>
+            <input type="email" value="pqr">
+        </form>
+    </div>
+
+    <!-- Destination Selection -->
+    <div class="container">
+        <h2>Select Your Destination</h2>
+        <input type="checkbox" name="place" value="SWITZERLAND"> SWITZERLAND <br>
+        <input type="checkbox" name="place" value="DUBAI"> DUBAI <br>
+        <input type="checkbox" name="place" value="USA"> USA <br>
+        <input type="checkbox" name="place" value="NEW YORK"> NEW YORK <br>
+        <input type="checkbox" name="place" value="SYDNEY"> SYDNEY <br><br>
+
+        <!-- Submit Button Below Destination Selection -->
+        <button type="submit">Submit</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Travel Bliss. All rights reserved.
+    </footer>
+
+</body>
+</html>

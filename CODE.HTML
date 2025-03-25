@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Bliss - Explore the World</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: absolute;
+            align-items: absolute;
+            text-align: absolute;
+            color: white;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Background Slideshow */
+        .slideshow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .slideshow img {
+            position: absolute;
+            width: 100%;
+            height: 150%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+        .slideshow img.active {
+            opacity: 1;
+        }
+
+        /* Intro Content */
+        .intro-container {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 50px;
+            border-radius: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Logo */
+        .logo {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            font-style: italic;
+        }
+
+        .enter-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #ff6600;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .enter-btn:hover {
+            background: #ff3300;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Slideshow -->
+    <div class="slideshow">
+      <img src="https://media.istockphoto.com/id/1141255604/photo/varkala-beach-kerala-india.jpg?s=612x612&w=0&k=20&c=0PLnBEHmKdVk8WREsB7dMMriVXJCKKuBAPP9wXJb7SA=" class="active">
+      <img src="https://www.indiantempletour.com/wp-content/uploads/2019/01/Leh-Ladakh-Package.webp">
+      <img src="https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg">
+      <img src="https://static.theceomagazine.net/wp-content/uploads/2022/06/14175703/Luxury-Adventures-quintessentially.jpg">
+    </div>
+
+    <!-- Main Intro Content -->
+    <div class="intro-container">
+ <img src="https://png.pngtree.com/png-vector/20241120/ourmid/pngtree-green-s-vector-design-images-white-background-png-image_14507019.png" height="150" width="150" alt="Logo">
+        <h1>Travel Bliss</h1>
+        <p>"Adventure awaits, go find it!"</p>
+        <a href="home.html" class="enter-btn">Start Exploring</a>
+    </div>
+
+    <script>
+        // Slideshow Animation
+        let slides = document.querySelectorAll('.slideshow img');
+        let index = 0;
+
+        function changeSlide() {
+            slides[index].classList.remove('active');
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }
+
+        setInterval(changeSlide, 4000); // Change image every 4 seconds
+    </script>
+
+</body>
+</html>
